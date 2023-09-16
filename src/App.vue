@@ -29,7 +29,7 @@ renderer.setClearColor("#f2f2f2");
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // 光源
-const light = new THREE.HemisphereLight("#ffffff", "#000000", 2);
+const light = new THREE.HemisphereLight("#ffffff", "#000000", 8);
 scene.add(light);
 
 // 鼠标控件
@@ -39,7 +39,7 @@ new OrbitControls(camera, renderer.domElement);
 let mixer = null;
 let actions;
 const loader = new FBXLoader();
-loader.load("/public/ar/b/Ace_Bee.fbx", (fbx) => {
+loader.load("/ar/b/Ace_Bee.fbx", (fbx) => {
   scene.add(fbx);
   // 动画
   // mixer = new THREE.AnimationMixer(fbx);
